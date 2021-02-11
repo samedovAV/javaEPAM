@@ -9,6 +9,10 @@ public class RationalFraction {
         this.denominator = denominator;
     }
 
+    public RationalFraction() {
+
+    }
+
     public int getNumerator() {
         return numerator;
     }
