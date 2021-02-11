@@ -9,5 +9,10 @@ public class CircleRunner {
         CircleUtils circleUtils = new CircleUtils();
         circles = circleUtils.createArray();
         circles.forEach(System.out::println);
+
+        circleUtils.findMinArea(circles);
+        circleUtils.findMinPer(circles);
+
+        circleUtils.findOnOneLine(circles);
     }
 }
