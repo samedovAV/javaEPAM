@@ -27,14 +27,16 @@ public class ComplexActions {
         list.forEach(System.out::println);
     }
 
-    public void sum(ArrayList<Complex> list) {
+    public Complex sum(ArrayList<Complex> list) {
         double newRe = 0;
         double newIm = 0;
         for (Complex complex : list) {
             newRe += complex.getRe();
             newIm += complex.getIm();
         }
-        System.out.println(new Complex(newRe, newIm).toString());
+        Complex res = new Complex(newRe, newIm);
+        System.out.println(res.toString());
+        return res;
     }
 
     public void multi(ArrayList<Complex> list) {

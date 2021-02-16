@@ -2,7 +2,7 @@ package thirdChapter.thirdChapterB.task7;
 
 import java.util.ArrayList;
 
-public class TriabgleRunner {
+public class TriangleRunner {
     /**
      * Определить класс Треугольник на плоскости. Определить площадь и периметр треугольника.
      * Создать массив/список/множество объектов и подсчитать количество треугольников
