@@ -8,6 +8,7 @@ import lombok.Data;
 public class Interval {
     private int left;
     private int right;
+    private boolean ends;
 }
 
 

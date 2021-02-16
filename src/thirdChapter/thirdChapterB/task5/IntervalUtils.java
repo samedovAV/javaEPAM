@@ -15,7 +15,7 @@ public class IntervalUtils {
             left = right;
             right = left;
         }
-        return new Interval(left, right);
+        return new Interval(left, right, false);
     }
 
     public ArrayList<Interval> createIntervals() {

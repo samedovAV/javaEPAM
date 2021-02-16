@@ -3,12 +3,19 @@ package thirdChapter.thirdChapterB.task1;
 import java.util.ArrayList;
 
 public class Main {
+    /**
+     * Определить класс Дробь (Рациональная Дробь) в виде пары чисел m и n.
+     * Объявить и инициализировать массив из k дробей, ввести/вывести значения
+     * для массива дробей. Создать массив/список/множество объектов и передать
+     * его в метод, который изменяет каждый элемент массива с четным
+     * индексом путем добавления следующего за ним элемента.
+    */
     public static void main(String[] args) {
         ArrayList<RationalFraction> fractions = new ArrayList<>(createFractions(4));
         fractions.forEach(System.out::println);
 
-        Actions actions = new Actions();
-        System.out.println("\n");
+        RationalFractionUtils actions = new RationalFractionUtils();
+        System.out.print("\n");
         actions.addition(fractions);
     }
 
