@@ -3,6 +3,7 @@ package thirdChapter.thirdChapterB.task7;
 import thirdChapter.thirdChapterB.task6.Point;
 import thirdChapter.thirdChapterB.task6.PointUtils;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -62,21 +63,29 @@ public class TriangleUtils {
         System.out.println("Среди треугольников: равносторонних: " + eq +
                 " равнобедренных: " + is + " прямоугольных: " + ri + " произвольных: " + ar);
 
-        System.out.println("Для равносторонних");
-        calculateAreaInGroup(eqs);
-        calculatePerInGroup(eqs);
+        if(eq != 0) {
+            System.out.println("Для равносторонних:");
+            calculateAreaInGroup(eqs);
+            calculatePerInGroup(eqs);
+        }
 
-        System.out.println("Для равнобедренных");
-        calculateAreaInGroup(iss);
-        calculatePerInGroup(iss);
+        if(is != 0) {
+            System.out.println("Для равнобедренных:");
+            calculateAreaInGroup(iss);
+            calculatePerInGroup(iss);
+        }
 
-        System.out.println("Для прямоугольных");
-        calculateAreaInGroup(ris);
-        calculatePerInGroup(ris);
+        if(ri != 0) {
+            System.out.println("Для прямоугольных:");
+            calculateAreaInGroup(ris);
+            calculatePerInGroup(ris);
+        }
 
-        System.out.println("Для произвольных");
-        calculateAreaInGroup(ars);
-        calculatePerInGroup(ars);
+        if(ar != 0) {
+            System.out.println("Для произвольных:");
+            calculateAreaInGroup(ars);
+            calculatePerInGroup(ars);
+        }
     }
 
     public void calculateAreaInGroup(ArrayList<Triangle> triangles) {
@@ -89,7 +98,7 @@ public class TriangleUtils {
                 area = tr.findArea();
             }
         }
-        System.out.println("Самая маленькая площадь: " + area);
+        System.out.println("Самая маленькая площадь: " + new DecimalFormat("#0.00").format(area));
     }
 
     public void calculatePerInGroup(ArrayList<Triangle> triangles) {
@@ -102,6 +111,6 @@ public class TriangleUtils {
                 per = tr.findPer();
             }
         }
-        System.out.println("Самая маленький периметр: " + per);
+        System.out.println("Самая маленький периметр: " + new DecimalFormat("#0.00").format(per));
     }
 }

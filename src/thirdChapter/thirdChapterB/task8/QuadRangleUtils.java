@@ -3,6 +3,7 @@ package thirdChapter.thirdChapterB.task8;
 import thirdChapter.thirdChapterB.task6.Point;
 import thirdChapter.thirdChapterB.task6.PointUtils;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -64,21 +65,29 @@ public class QuadRangleUtils {
         System.out.println("Среди многоугольников: квадратов: " + sqr +
                 " прямоугольников: " + rec + " ромбов: " + rho + " произвольных: " + arb);
 
-        System.out.println("Для квадратов");
-        calculatePerInGroup(sqrs);
-        calculateAreaInGroup(sqrs);
+        if(sqr != 0) {
+            System.out.println("Для квадратов");
+            calculatePerInGroup(sqrs);
+            calculateAreaInGroup(sqrs);
+        }
 
-        System.out.println("Для прямоугольников");
-        calculatePerInGroup(recs);
-        calculateAreaInGroup(recs);
+        if(rec != 0) {
+            System.out.println("Для прямоугольников");
+            calculatePerInGroup(recs);
+            calculateAreaInGroup(recs);
+        }
 
-        System.out.println("Для ромбов");
-        calculatePerInGroup(rhos);
-        calculateAreaInGroup(rhos);
+        if(rho != 0) {
+            System.out.println("Для ромбов");
+            calculatePerInGroup(rhos);
+            calculateAreaInGroup(rhos);
+        }
 
-        System.out.println("Для произвольных");
-        calculatePerInGroup(arbs);
-        calculateAreaInGroup(arbs);
+        if(arb != 0) {
+            System.out.println("Для произвольных");
+            calculatePerInGroup(arbs);
+            calculateAreaInGroup(arbs);
+        }
     }
 
     private void calculateAreaInGroup(ArrayList<QuadRangle> quadRangles) {
@@ -91,7 +100,7 @@ public class QuadRangleUtils {
                 area = qr.getArea();
             }
         }
-        System.out.println("Самая маленькая площадь: " + area);
+        System.out.println("Самая маленькая площадь: " + new DecimalFormat("#0.00").format(area));
     }
 
     private void calculatePerInGroup(ArrayList<QuadRangle> quadRangles) {
@@ -104,6 +113,6 @@ public class QuadRangleUtils {
                 per = qr.findPer();
             }
         }
-        System.out.println("Самая маленький периметр: " + per);
+        System.out.println("Самая маленький периметр: " + new DecimalFormat("#0.00").format(per));
     }
 }

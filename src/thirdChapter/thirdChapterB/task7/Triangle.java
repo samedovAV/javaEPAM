@@ -13,7 +13,7 @@ public class Triangle {
     private Type type;
 
     public double findArea() {
-        double area = 0;
+        double area;
 
         double deter = ((a.getX() - c.getX()) * (b.getY() - c.getY()))
             - (((b.getX() - c.getX()) * (a.getY() - c.getY())));

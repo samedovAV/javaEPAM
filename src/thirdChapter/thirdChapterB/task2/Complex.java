@@ -1,10 +1,12 @@
 package thirdChapter.thirdChapterB.task2;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.text.DecimalFormat;
 
 @Data
+@NoArgsConstructor
 public class Complex {
     private double re;
     private double im;

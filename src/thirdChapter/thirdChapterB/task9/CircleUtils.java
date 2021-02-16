@@ -2,6 +2,7 @@ package thirdChapter.thirdChapterB.task9;
 
 import thirdChapter.thirdChapterB.task6.PointUtils;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,10 +13,17 @@ public class CircleUtils {
         Circle circle = new Circle();
         circle.setCenter(pointUtils.createPoint());
         circle.setRadius(Math.round((1 + (Math.random() * 10)) * 100.0) / 100.0);
-        circle.setArea(Math.round(circle.findArea() * 100.0) / 100.0);
-        circle.setPer(Math.round(circle.findPer() * 100.0) / 100.0);
         return circle;
     }
+
+    private double findArea(Circle circle) {
+        return Math.PI * Math.pow(circle.getRadius(), 2);
+    }
+
+    private double findPer(Circle circle) {
+        return 2 * Math.PI * circle.getRadius();
+    }
+
 
     public ArrayList<Circle> createArray() {
         ArrayList<Circle> res = new ArrayList<>();
@@ -30,23 +38,23 @@ public class CircleUtils {
     }
 
     public void findMinPer(ArrayList<Circle> list) {
-        double minPer = list.get(0).getPer();
+        double minPer = findPer(list.get(0));
         for(Circle circle : list) {
-            if(minPer > circle.getPer()) {
-                minPer = circle.getPer();
+            if(minPer > findPer(circle)) {
+                minPer = findPer(circle);
             }
         }
-        System.out.println("Самый маленький периметр: " + minPer);
+        System.out.println("Самый маленький периметр: " + new DecimalFormat("#0.00").format(minPer));
     }
 
     public void findMinArea(ArrayList<Circle> list) {
-        double minArea = list.get(0).getArea();
+        double minArea = findArea(list.get(0));
         for(Circle circle : list) {
-            if(minArea > circle.getArea()) {
-                minArea = circle.getArea();
+            if(minArea > findArea(circle)) {
+                minArea = findArea(circle);
             }
         }
-        System.out.println("Самая маленькая площадь: " + minArea);
+        System.out.println("Самая маленькая площадь: " + new DecimalFormat("#0.00").format(minArea));
     }
 
     public void findOnOneLine(ArrayList<Circle> list) {

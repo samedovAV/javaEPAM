@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Line {
-    //TODO подумать как сделать
+
     private double a;
     private double b;
     private double c;

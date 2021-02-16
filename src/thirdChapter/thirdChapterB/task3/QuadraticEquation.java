@@ -94,17 +94,17 @@ public class QuadraticEquation {
         sb.append(new DecimalFormat("#0.00").format(a)).append("*x^2");
         if (b != 0) {
             if (b > 0) {
-                sb = sb.append("+");
+                sb.append("+");
             }
-            sb = sb.append(new DecimalFormat("#0.00").format(b)).append("*x");
+            sb.append(new DecimalFormat("#0.00").format(b)).append("*x");
         }
         if (c != 0) {
             if (c > 0) {
-                sb = sb.append("+");
+                sb.append("+");
             }
             sb.append(new DecimalFormat("#0.00").format(c));
         }
-        sb = sb.append("=0");
+        sb.append("=0");
 
         return sb.toString();
     }

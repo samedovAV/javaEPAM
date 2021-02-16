@@ -1,5 +1,6 @@
 package thirdChapter.thirdChapterB.task3;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -29,7 +30,7 @@ public class QuadraticEquationUtils {
         return res;
     }
 
-    public ArrayList<Double> findMaxRoots(ArrayList<QuadraticEquation> list) {
+    public void findMaxRoots(ArrayList<QuadraticEquation> list) {
         ArrayList<Double> res = new ArrayList<>();
         list.forEach(quadraticEquation -> {
             try {
@@ -40,12 +41,11 @@ public class QuadraticEquationUtils {
         });
         System.out.println("Максимальные корни");
         for (Double d : res) {
-            System.out.println(d);
+            System.out.println(new DecimalFormat("#0.00").format(d));
         }
-        return res;
     }
 
-    public ArrayList<Double> findMinRoots(ArrayList<QuadraticEquation> list) {
+    public void findMinRoots(ArrayList<QuadraticEquation> list) {
         ArrayList<Double> res = new ArrayList<>();
         list.forEach(quadraticEquation -> {
             try {
@@ -56,8 +56,7 @@ public class QuadraticEquationUtils {
         });
         System.out.println("Минимальные корни");
         for (Double d : res) {
-            System.out.println(d);
+            System.out.println(new DecimalFormat("#0.00").format(d));
         }
-        return res;
     }
 }

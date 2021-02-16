@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class LineUtils {
 
+    //TODO перечение
+
     private Line createLine() {
         int a = (int)(1+ (Math.random() * 10));
         int b = (int)(1+ (Math.random() * 10));

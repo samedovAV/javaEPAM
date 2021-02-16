@@ -37,8 +37,9 @@ public class QuadRangle {
 
         setQuadrangleType(AB, BC, CD, AD, AC, BD);
 
-        this.setPer(AB + BC + CD + AD);
-        return AB + BC + CD + AD;
+        double per = AB + BC + CD + AD;
+        this.setPer(per);
+        return per;
     }
 
     public void setQuadrangleType(double a, double b, double c, double d, double e, double f) {
