@@ -6,6 +6,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class AirlineRunner {
+    /**
+     * Airline: Пункт назначения, Номер рейса, Тип самолета, Время вылета, Дни
+     * недели.
+     * Создать массив объектов. Вывести:
+     * a) список рейсов для заданного пункта назначения;
+     * b) список рейсов для заданного дня недели;
+     * c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
+    */
     public static void main(String[] args) {
 
         AirlineUtils airlineUtils = new AirlineUtils();

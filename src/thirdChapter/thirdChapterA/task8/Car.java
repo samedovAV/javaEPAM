@@ -7,16 +7,10 @@ import lombok.Data;
 @AllArgsConstructor
 public class Car {
     private int id;
-
     private String mark;
-
     private String model;
-
     private int year;
-
     private String color;
-
     private int price;
-
     private String registrationNumber;
 }

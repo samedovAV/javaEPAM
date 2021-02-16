@@ -6,6 +6,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class TrainRunner {
+    /**
+     * Train: Пункт назначения, Номер поезда, Время отправления, Число мест
+     * (общих, купе, плацкарт, люкс).
+     * Создать массив объектов. Вывести:
+     * a) список поездов, следующих до заданного пункта назначения;
+     * b) список поездов, следующих до заданного пункта назначения и отправляющихся после заданного часа;
+     * c) список поездов, отправляющихся до заданного пункта назначения и имеющих общие места.
+    */
     public static void main(String[] args) {
         TrainUtils trainUtils = new TrainUtils();
         ArrayList<Train> trains = trainUtils.createTrainList();

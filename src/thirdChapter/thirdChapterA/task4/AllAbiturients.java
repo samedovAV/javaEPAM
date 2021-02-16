@@ -1,20 +1,25 @@
 package thirdChapter.thirdChapterA.task4;
 
+import java.util.ArrayList;
+
 public class AllAbiturients {
+    /**
+     * Abiturient: id, Фамилия, Имя, Отчество, Адрес, Телефон, Оценки.
+     * Создать массив объектов. Вывести:
+     * a) список абитуриентов, имеющих неудовлетворительные оценки;
+     * b) список абитуриентов, у которых сумма баллов выше заданной;
+     * c) выбрать заданное число n абитуриентов, имеющих самую высокую
+     * сумму баллов (вывести также полный список абитуриентов, имеющих
+     * полупроходную сумму).
+    */
     public static void main(String[] args) {
-        Abiturient ab1 = new Abiturient(0,"Петр","Иванович","Семенов","Сумская 14","0965423571", new int[]{1, 2, 3, 4, 3});
-        Abiturient ab2 = new Abiturient(1,"Степан","Семеновович","Иванов","Сумская 56","066452351", new int[]{4, 5, 5, 4, 5});
-        Abiturient ab3 = new Abiturient(2,"Иван","Иванович","Иванов","Сумская 25","099541235", new int[]{2, 3, 4, 3, 2});
-
         AbiturientList abiturientList = new AbiturientList();
-        abiturientList.addAbiturient(ab1);
-        abiturientList.addAbiturient(ab2);
-        abiturientList.addAbiturient(ab3);
+        ArrayList<Abiturient> abiturients = abiturientList.createArray();
 
-        abiturientList.checkBadEvaluation();
-        System.out.println("\n");
-        abiturientList.checkEvaluationSum(13);
-        System.out.println("\n");
-        abiturientList.leadingAbiturients(2);
+        abiturientList.checkBadEvaluation(abiturients);
+        System.out.print("\n");
+        abiturientList.checkEvaluationSum(13, abiturients);
+        System.out.print("\n");
+        abiturientList.leadingAbiturients(2, abiturients);
     }
 }

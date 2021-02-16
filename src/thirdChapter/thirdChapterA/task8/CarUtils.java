@@ -20,6 +20,7 @@ public class CarUtils {
                 System.out.println(car.toString());
             }
         }
+        System.out.println();
     }
 
     public void checkYear(ArrayList<Car> list, String model) {
@@ -34,6 +35,7 @@ public class CarUtils {
                 System.out.println(car.toString());
             }
         }
+        System.out.println();
     }
 
     public void checkYearAndPrice(ArrayList<Car> list, int year, int price) {
@@ -42,5 +44,6 @@ public class CarUtils {
                 System.out.println(car.toString());
             }
         }
+        System.out.println();
     }
 }
